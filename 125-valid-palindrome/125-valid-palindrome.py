@@ -5,6 +5,7 @@ class Solution:
             if i.isalnum():
                 lower_s.append(i.lower())
                 
+        #is palindrome?            
         while len(lower_s)>1:
             if lower_s.pop(0) != lower_s.pop():
                 return False
