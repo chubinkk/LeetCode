@@ -1,13 +1,7 @@
 class Solution:
     def isPalindrome(self, s: str) -> bool:
-        lower_s = []
-        for i in s:
-            if i.isalnum():
-                lower_s.append(i.lower())
-                
-        #is palindrome?            
-        while len(lower_s)>1:
-            if lower_s.pop(0) != lower_s.pop():
-                return False
-            
-        return True
+        s = s.lower()
+        
+        s = re.sub('[^a-z0-9]', '', s)
+        
+        return s == s[::-1]
